@@ -12,6 +12,9 @@ O programa traduz uma mensagem escrita no terminal para código morse e manda pa
 
 A placa tem um botão e duas luzes (uma amarela e uma azul) para o envio de mensagens. O programa leva em conta que pode haver um erro do operador durante o envio da mensagem. Ele recebe a mensagem dada pelo operador, traduz ela para código morse usando um "dicionario" e imprime ela no terminal.
 
+## Video
+https://www.youtube.com/watch?v=CHMQ9UsgFfU
+
 ## Grupo:
 - Luís Otávio Machado Ferreira
 - Luca Maciel Alexander
