@@ -12,6 +12,7 @@ const char* letters[] = {
   '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
 };
 
+const int beep = 11;
 const int ledPin = 10;
 const int ledAzul = 7;
 const int ledAmarelo = 8;
@@ -37,6 +38,10 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
   Serial.println("Programa Iniciado");
+  flashLed (ledAzul);
+  flashLed (ledAmarelo);
+  flashLed (ledPin);
+  flashLed (beep);
   
 }
 
@@ -68,6 +73,12 @@ void loop() {
   if ((!input) || (letterPos > 5)) {
     letter[letterPos] = '\0';
     int flag = 1;
+    if (!(strcmp(letter, ".-.-."))) {
+      Serial.println("ENDLINE");
+      flag = 0;
+      letterPos = 0;
+      flashLed(ledAmarelo);
+    }
     for (int i = 0; (i < 36) && flag; i++) {
       if (!(strcmp(letter, morse[i]))) {
 	      char c = letters[i];
